@@ -1,5 +1,6 @@
 # CGPA-Calculator-Web-Application
-A simple fun project!
+A simple fun project! [Click Here to Visit](https://montasirfahim.github.io/CGPA-Calculator-Web-Application/)
+
 ---
 While learning JavaScript, I had a sudden thought: why not build a fun project with my beginner knowledge of HTML, CSS, and JavaScript?
 By using the CGPA Calculator WebApp, you can calculate your CGPA and generate a formally styled grade sheet that can be printed or saved as a PDF.
