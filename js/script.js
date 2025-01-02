@@ -23,7 +23,7 @@
             } else if (gpa >= 0.0 && gpa < 2.00) {
                 return 'F';
             } else {
-                return 'Invalid GPA';  // In case GPA is out of the valid range
+                return 'Invalid GPA';  
             }
         }
 
@@ -118,7 +118,6 @@
             window.print();
             document.body.innerHTML = originalContent;
         }
-
 
 
         function resetForm() {
