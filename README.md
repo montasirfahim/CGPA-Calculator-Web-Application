@@ -6,5 +6,5 @@ By using the CGPA Calculator WebApp, you can calculate your CGPA and generate a 
 
 As a university student, I often feel the need to calculate my CGPA for two main reasons:
 
-  1. To get an approximate idea of my result after finishing a semester final exam.
-  2. To plan my study roadmap for a running semester, so I can understand my current preparation and how much effort I need to reach my target CGPA.
+  - To get an approximate idea of my result after finishing a semester final exam.
+  - To plan my study roadmap for a running semester, so I can understand my current preparation and how much effort I need to reach my target CGPA.
