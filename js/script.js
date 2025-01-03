@@ -23,7 +23,7 @@
             } else if (gpa >= 0.0 && gpa < 2.00) {
                 return 'F';
             } else {
-                return 'Invalid GPA';  // In case GPA is out of the valid range
+                return 'Invalid GPA';
             }
         }
 
@@ -50,12 +50,12 @@
             row.remove();
         }
 
+         let courses = [];
          function calculateCGPA() {
             const courseRows = document.querySelectorAll('.course-row');
             let totalCredit = 0;
             let totalObtainedPoint = 0;
-            const courses = [];
-
+            courses = [];
             courseRows.forEach(row => {
                 const inputs = row.querySelectorAll('input');
                 const courseName = inputs[0].value;
@@ -110,15 +110,116 @@
         }
 
 
+        // function printResult() {
+        //     const resultDiv = document.getElementById('result').innerHTML;
+        //     const originalContent = document.body.innerHTML;
+        //     const inputSection = document.getElementById('course-container').innerHTML;
+
+        //     document.body.innerHTML = resultDiv;
+        //     window.print();
+        //     document.body.innerHTML = inputSection + originalContent;
+        // }
+
+
+
         function printResult() {
-            const resultDiv = document.getElementById('result').innerHTML;
-            const originalContent = document.body.innerHTML;
+            const printTab = window.open('', '_blank');
+            printTab.document.open();
+            printTab.document.write(`
+                <html>
+                <head>
+                    <title>Print Result</title>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            margin: 30px 5px 0 5px; /* top: 20px, left and right: 5px, bottom: 0px */
+                        }
+                        table {
+                            width: 100%;
+                            border-collapse: collapse;
+                            table-layout: fixed;
+                            text-align: left;
+                        }
 
-            document.body.innerHTML = resultDiv;
-            window.print();
-            document.body.innerHTML = originalContent;
+                        th, td {
+                            border: 1px solid black;
+                            padding: 4px;
+                            white-space: nowrap; /* Prevents wrapping */
+                        }
+
+                        th {
+                            background-color: #f2f2f2; 
+                        }
+
+                
+                        th:nth-child(1), td:nth-child(1) {
+                            width: 47%;
+                        }
+
+                        th:nth-child(2), td:nth-child(2) {
+                            width: 16%; 
+                        }
+
+                        th:nth-child(3), td:nth-child(3) {
+                            width: 14%; /* "Grade Point" */
+                        }
+
+                        th:nth-child(4), td:nth-child(4) {
+                            width: 15%; /* "Letter Grade" */
+                        }
+
+                        th:nth-child(5), td:nth-child(5) {
+                            width: 8%; /* "Point" column */
+                        }
+
+                        h2, h3 {
+                            text-align: left;
+                        }
+
+                        .print-button {
+                            display: none;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h2>Result:</h2>
+                    <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+                        <thead>
+                            <tr>
+                                <th>Course Name</th>
+                                <th>Course Credit</th>
+                                <th>Grade Point</th>
+                                <th>Letter Grade</th>
+                                <th>Point</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${courses.map(course => `
+                                <tr>
+                                    <td>${course.courseName}</td>
+                                    <td>${course.courseCredit.toFixed(2)}</td>
+                                    <td>${course.obtainedGPA.toFixed(2)}</td>
+                                    <td>${course.letterGrade}</td>
+                                    <td>${course.obtainedPoint.toFixed(2)}</td>
+                                </tr>
+                            `).join('')}
+                            
+                            <tr>
+                                <td><strong>Total:</strong></td>
+                                <td><strong>${courses.reduce((sum, course) => sum + course.courseCredit, 0).toFixed(2)}</strong></td>
+                                <td></td><td></td>
+                                <td><strong>${courses.reduce((sum, course) => sum + course.obtainedPoint, 0).toFixed(2)}</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Total CGPA: ${courses.length > 0 ? (courses.reduce((sum, course) => sum + course.obtainedPoint, 0) / courses.reduce((sum, course) => sum + course.courseCredit, 0)).toFixed(2) : 0}</h3>
+                </body>
+                </html>
+            `);
+            printTab.document.close();
+            printTab.focus(); 
+            printTab.print(); 
         }
-
 
 
         function resetForm() {
