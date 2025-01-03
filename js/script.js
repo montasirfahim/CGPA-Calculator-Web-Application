@@ -132,7 +132,7 @@
                     <style>
                         body {
                             font-family: Arial, sans-serif;
-                            margin: 30px 5px 0 5px; /* top: 20px, left and right: 5px, bottom: 0px */
+                            margin: 35px 5px 0 5px; /* top: 35px, left and right: 5px, bottom: 0px */
                         }
                         table {
                             width: 100%;
@@ -182,7 +182,7 @@
                     </style>
                 </head>
                 <body>
-                    <h2>Result:</h2>
+                    <h2>Grade Sheet:</h2>
                     <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
                         <thead>
                             <tr>
