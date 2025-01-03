@@ -124,7 +124,7 @@
 
         function printResult() {
             const printTab = window.open('', '_blank');
-            printTab.document.open();
+         printTab.document.open();
             printTab.document.write(`
                 <html>
                 <head>
