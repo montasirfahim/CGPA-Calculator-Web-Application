@@ -16,9 +16,9 @@
         <h1>Enter Course Details</h1>
         <div id="course-container">
             <div class="course-row">
-                <input type="text" placeholder="Course Name">
-                <input type="number" placeholder="Course Credit" min="1">
-                <input type="number" placeholder="Obtained Grade Point" step="0.25" min="0" max="4">
+                <input type="text" placeholder="Course Name" style="width: 55%;">
+                <input type="number" placeholder="Course Credit" min="1" style="width: 10%;">
+                <input type="number" placeholder="Obtained Grade Point" step="0.25" min="0" max="4" style="width: 20%;">
                 <button class="add-button" onclick="addCourseRow()">Add More Course</button>
             </div>
         </div>
@@ -28,7 +28,66 @@
         </div>
         <div id="result" style="margin-top: 20px;"></div>
 
+        <!-- Div Card -->
+        <div class="card">
+            <div class="cardIntro">
+                <h3 style="margin-top: 5px">Why CGPA Calculator ?</h3>
+                <p style="font-size: 16px; font-family: Arial, sans-serif;">
+                    As a university student, We often feel the need to calculate our CGPA for two main reasons:<br> <br>
+                    <ul>
+                        <li>To get an approximate idea of our result after finishing a semester final exam.<br></li>
+                        <li>
+                            To plan our study roadmap for a running semester, so that we can understand our current preparation and how much effort we need to reach our target CGPA.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="cardLetterGrade">
+                <h3 style="margin-top: 5px">Grading System:</h3>
+                <table border="1" style="width: 95%; border-collapse: collapse; text-align: center; padding: 5px; border-color: black; margin-left: 10px; margin-right: 10px;">
+                    <tr>
+                        <th>Marks</th><th>Grade</th><th>Letter</th>
+                    </tr>
+                    <tr>
+                        <td> 80% and above </td> <td>4.00</td><td>A+</td>
+                    </tr>
+                    <tr>
+                        <td> 75% to less than 80% </td> <td>3.75</td><td>A</td>
+                    </tr>
+                    <tr>
+                        <td> 70% to less than 75% </td> <td>3.50</td><td>A-</td>
+                    </tr>
+                    <tr>
+                        <td> 65% to less than 70% </td> <td>3.25</td><td>B+</td>
+                    </tr>
+                    <tr>
+                        <td> 60% to less than 65% </td> <td>3.00</td><td>B</td>
+                    </tr>
+                    <tr>
+                        <td> 55% to less than 60% </td> <td>2.75</td><td>B-</td>
+                    </tr>
+                    <tr>
+                        <td> 50% to less than 55% </td> <td>2.50</td><td>C+</td>
+                    </tr>
+                    <tr>
+                        <td> 45% to less than 50% </td> <td>2.25</td><td>C-</td>
+                    </tr>
+                    <tr>
+                        <td> 40% to less than 45% </td> <td>2.00</td><td>D</td>
+                    </tr>
+                    <tr>
+                        <td> less than 40% </td> <td>0.00</td><td>F</td>
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+
+        
     </div>
+
     <div class="footer">
         <footer style="text-align: center; margin-top: 0px; padding: 0.5px 0; background-color: #f1f1f1; font-size: 14px; color: #555;">
             <p>@2025 CGPA Calculator | All rights reserved | Developed by Fahim  

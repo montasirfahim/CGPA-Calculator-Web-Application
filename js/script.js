@@ -4,7 +4,7 @@
         function getLetterGrade(gpa) {
             if (gpa == 4.0) {
                 return 'A+';
-            } else if (gpa >= 3.75 && gpa <= 4.00) {
+            } else if (gpa >= 3.75 && gpa < 4.00) {
                 return 'A';
             } else if (gpa >= 3.50 && gpa < 3.75) {
                 return 'A-';
@@ -36,10 +36,10 @@
 
             newRow.innerHTML = `
                 
-                <input type="text" placeholder="Course Name">
-                <input type="number" placeholder="Course Credit" min="1">
-                <input type="number" placeholder="Obtained Grade Point" step="0.25" min="0" max="4">
-		<button class="delete-button" onclick="deleteCourseRow(this)">Delete</button>
+                <input type="text" placeholder="Course Name" style="width: 55%;">
+                <input type="number" placeholder="Course Credit" min="1" style="width: 10%;">
+                <input type="number" placeholder="Obtained Grade Point" step="0.25" min="0" max="4" style="width: 20%;">
+		<button class="delete-button" onclick="deleteCourseRow(this)">Delete   Course</button>
             `;
 
             container.appendChild(newRow);
@@ -110,21 +110,10 @@
         }
 
 
-        // function printResult() {
-        //     const resultDiv = document.getElementById('result').innerHTML;
-        //     const originalContent = document.body.innerHTML;
-        //     const inputSection = document.getElementById('course-container').innerHTML;
-
-        //     document.body.innerHTML = resultDiv;
-        //     window.print();
-        //     document.body.innerHTML = inputSection + originalContent;
-        // }
-
-
-
+      
         function printResult() {
             const printTab = window.open('', '_blank');
-         printTab.document.open();
+            printTab.document.open();
             printTab.document.write(`
                 <html>
                 <head>
