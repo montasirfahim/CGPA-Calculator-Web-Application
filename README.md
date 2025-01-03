@@ -1,5 +1,5 @@
 # CGPA-Calculator-Web-Application
-A simple fun project! [Click Here to Visit](https://montasirfahim.github.io/CGPA-Calculator-Web-Application/)
+### A simple fun project! [Click Here to Visit](https://montasirfahim.github.io/CGPA-Calculator-Web-Application/)
 
 ---
 While learning JavaScript, I had a sudden thought: why not build a fun project with my beginner knowledge of HTML, CSS, and JavaScript?
