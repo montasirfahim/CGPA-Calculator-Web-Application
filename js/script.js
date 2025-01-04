@@ -39,7 +39,7 @@
                 <input type="text" placeholder="Course Name" style="width: 55%;">
                 <input type="number" placeholder="Course Credit" min="1" style="width: 10%;">
                 <input type="number" placeholder="Obtained Grade Point" step="0.25" min="0" max="4" style="width: 20%;">
-		<button class="delete-button" onclick="deleteCourseRow(this)">Delete   Course</button>
+		<button class="delete-button" onclick="deleteCourseRow(this)">Delete Course</button>
             `;
 
             container.appendChild(newRow);
@@ -214,9 +214,9 @@
         function resetForm() {
             document.getElementById('course-container').innerHTML = `
                 <div class="course-row">
-                    <input type="text" placeholder="Course Name">
-                    <input type="number" placeholder="Course Credit" min="1">
-                    <input type="number" placeholder="Obtained Grade Point" step="0.25" min="0" max="4">
+                    <input type="text" placeholder="Course Name" style="width: 55%;">
+                    <input type="number" placeholder="Course Credit" min="1" style="width: 10%;">
+                    <input type="number" placeholder="Obtained Grade Point" step="0.25" min="0" max="4" style="width: 20%;">
                     <button class="add-button" onclick="addCourseRow()">Add More Course</button>
                 </div>
             `;
