@@ -93,6 +93,8 @@
             }
             .cardLetterGrade {
                 margin-top: 20px;
+                justify-content: center;
+                align-items: center;      
             }
             .cardIntro {
                 justify-content: center;
